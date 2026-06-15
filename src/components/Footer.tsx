@@ -42,7 +42,9 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.instagram.com/todescattimoveis/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent-500 hover:text-primary-900 transition-all duration-300"
                 aria-label="Instagram"
               >
@@ -93,11 +95,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin className="w-4 h-4 text-accent-400 mt-0.5 shrink-0" />
-                <span>Erechim, RS - Brasil</span>
+                <span>Balneário Camboriú, SC - Brasil</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Phone className="w-4 h-4 text-accent-400 shrink-0" />
-                <span>(54) 99999-9999</span>
+                <span>+55 47 8852-5430</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Mail className="w-4 h-4 text-accent-400 shrink-0" />

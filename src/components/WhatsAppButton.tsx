@@ -3,7 +3,7 @@
 import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppButton() {
-  const phoneNumber = '5554999999999';
+  const phoneNumber = '554788525430';
   const message = encodeURIComponent(
     'Olá! Vim pelo site da Imobiliária Todescatt e gostaria de mais informações sobre os imóveis disponíveis.'
   );

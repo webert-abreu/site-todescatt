@@ -151,8 +151,8 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
                     defaultValue=""
                   >
                     <option value="">Localização</option>
-                    <option value="Erechim">Erechim</option>
-                    <option value="Passo Fundo">Passo Fundo</option>
+                    <option value="Balneário Camboriú">Balneário Camboriú</option>
+                    <option value="Itapema">Itapema</option>
                   </select>
                 </div>
 

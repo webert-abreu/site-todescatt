@@ -12,12 +12,12 @@ export default function ContatoPage() {
     {
       icon: MapPin,
       title: 'Endereço',
-      lines: ['Erechim, RS', 'Brasil'],
+      lines: ['Balneário Camboriú, SC', 'Brasil'],
     },
     {
       icon: Phone,
       title: 'Telefone / WhatsApp',
-      lines: ['(54) 99999-9999', '(54) 3333-3333'],
+      lines: ['+55 47 8852-5430'],
     },
     {
       icon: Mail,
@@ -93,7 +93,7 @@ export default function ContatoPage() {
             <div className="bg-white rounded-2xl shadow-card border border-surface-100 overflow-hidden">
               <iframe
                 title="Localização Imobiliária Todescatt"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56236.33631957697!2d-52.30583!3d-27.6341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e3170f4f285f1b%3A0x35f1fd7cd9e6f1b5!2sErechim%20-%20RS!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113337.89201977937!2d-48.73031024345524!3d-27.022442220478053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8b6712391295b%3A0xc07ce9825b048d08!2sBalne%C3%A1rio%20Cambori%C3%BA%20-%20SC!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="220"
                 style={{ border: 0 }}

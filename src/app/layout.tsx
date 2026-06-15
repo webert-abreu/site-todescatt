@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     "apartamentos",
     "casas",
     "venda",
-    "Erechim",
-    "RS",
+    "Balneário Camboriú",
+    "SC",
     "Todescatt",
   ],
   openGraph: {

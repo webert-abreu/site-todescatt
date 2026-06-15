@@ -100,7 +100,7 @@ export default function ContactForm({ propertyTitle, propertyId }: ContactFormPr
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             className="w-full px-4 py-3 rounded-xl border border-surface-200 bg-white text-surface-900 placeholder:text-surface-400 focus:outline-none focus:ring-2 focus:ring-accent-500/30 focus:border-accent-500 transition-all"
-            placeholder="(54) 99999-9999"
+            placeholder="(47) 8852-5430"
           />
         </div>
       </div>
