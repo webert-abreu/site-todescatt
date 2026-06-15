@@ -163,9 +163,9 @@ export default function Footer() {
               <Image 
                 src="/1.png" 
                 alt="WAS Venture" 
-                width={120} 
-                height={36} 
-                className="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity invert grayscale mix-blend-screen" 
+                width={160} 
+                height={64} 
+                className="h-14 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity invert grayscale mix-blend-screen" 
               />
             </a>
           </div>
