@@ -40,12 +40,13 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   const isHome = pathname === '/';
+  const isTransparent = isHome && !isScrolled;
 
   return (
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-        isScrolled || !isHome
+        !isTransparent
           ? 'bg-white/80 backdrop-blur-md border-b border-surface-200/50 shadow-sm py-3'
           : 'bg-transparent py-6'
       )}
@@ -55,7 +56,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/logo-horizontal.png"
+              src={isTransparent ? "/Logotipo Horizontal Branco.png" : "/logo-horizontal.png"}
               alt="Imobiliária Todescatt"
               width={240}
               height={60}
@@ -73,8 +74,8 @@ export default function Header() {
                 className={cn(
                   'px-4 py-2 rounded-full text-sm font-medium transition-all duration-300',
                   pathname === link.href
-                    ? 'text-primary-900 bg-surface-100'
-                    : 'text-surface-600 hover:text-primary-900 hover:bg-surface-50'
+                    ? (isTransparent ? 'text-white bg-white/20' : 'text-primary-900 bg-surface-100')
+                    : (isTransparent ? 'text-white/80 hover:text-white hover:bg-white/10' : 'text-surface-600 hover:text-primary-900 hover:bg-surface-50')
                 )}
               >
                 {link.label}
@@ -86,16 +87,26 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <Link
               href="/contato"
-              className="hidden sm:flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary-950 text-white font-medium text-sm hover:bg-primary-900 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
+              className={cn(
+                "hidden sm:flex items-center gap-2 px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 hover:-translate-y-0.5",
+                isTransparent 
+                  ? "bg-white text-primary-950 hover:bg-white/90" 
+                  : "bg-primary-950 text-white hover:bg-primary-900 hover:shadow-md"
+              )}
             >
-              <Phone className="w-4 h-4 text-accent-400" />
+              <Phone className={cn("w-4 h-4", isTransparent ? "text-primary-900" : "text-accent-400")} />
               <span>Fale Conosco</span>
             </Link>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-full text-surface-600 hover:text-primary-900 hover:bg-surface-100 transition-colors"
+              className={cn(
+                "md:hidden p-2 rounded-full transition-colors",
+                isTransparent
+                  ? "text-white hover:bg-white/10"
+                  : "text-surface-600 hover:text-primary-900 hover:bg-surface-100"
+              )}
               aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
             >
               {isMobileMenuOpen ? (
