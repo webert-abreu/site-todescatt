@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Julius_Sans_One } from 'next/font/google';
+import { cn } from '@/lib/utils';
+
+const julius = Julius_Sans_One({
+  subsets: ['latin'],
+  weight: '400',
+});
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -148,15 +155,17 @@ export default function Footer() {
               href="https://www.wasventure.com.br" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-white/80 transition-colors group"
+              className="flex items-center gap-3 hover:text-white/80 transition-colors group mt-4 md:mt-0"
             >
-              <span>Desenvolvido por WAS Venture</span>
+              <span className={cn(julius.className, "text-[11px] tracking-[0.2em] uppercase text-white/50 group-hover:text-white/80 transition-colors")}>
+                Desenvolvido por
+              </span>
               <Image 
                 src="/1.png" 
                 alt="WAS Venture" 
-                width={80} 
-                height={24} 
-                className="h-5 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity invert grayscale mix-blend-screen" 
+                width={120} 
+                height={36} 
+                className="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity invert grayscale mix-blend-screen" 
               />
             </a>
           </div>
