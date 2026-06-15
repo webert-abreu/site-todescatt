@@ -16,8 +16,8 @@ export const mockProperties: Property[] = [
     parking: 2,
     address: {
       neighborhood: 'Centro',
-      city: 'Erechim',
-      state: 'RS',
+      city: 'Balneário Camboriú',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop',
@@ -45,8 +45,8 @@ export const mockProperties: Property[] = [
     parking: 3,
     address: {
       neighborhood: 'Bela Vista',
-      city: 'Erechim',
-      state: 'RS',
+      city: 'Balneário Camboriú',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop',
@@ -74,8 +74,8 @@ export const mockProperties: Property[] = [
     parking: 0,
     address: {
       neighborhood: 'Parque LÃ­via',
-      city: 'Erechim',
-      state: 'RS',
+      city: 'Balneário Camboriú',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop',
@@ -101,8 +101,8 @@ export const mockProperties: Property[] = [
     parking: 1,
     address: {
       neighborhood: 'Centro',
-      city: 'Passo Fundo',
-      state: 'RS',
+      city: 'Itapema',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop',
@@ -128,8 +128,8 @@ export const mockProperties: Property[] = [
     parking: 3,
     address: {
       neighborhood: 'Copas Verdes',
-      city: 'Erechim',
-      state: 'RS',
+      city: 'Balneário Camboriú',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&h=600&fit=crop',
@@ -156,8 +156,8 @@ export const mockProperties: Property[] = [
     parking: 2,
     address: {
       neighborhood: 'SÃ£o CristÃ³vÃ£o',
-      city: 'Erechim',
-      state: 'RS',
+      city: 'Balneário Camboriú',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop',
@@ -184,8 +184,8 @@ export const mockProperties: Property[] = [
     parking: 1,
     address: {
       neighborhood: 'TrÃªs Vendas',
-      city: 'Erechim',
-      state: 'RS',
+      city: 'Balneário Camboriú',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop',
@@ -211,8 +211,8 @@ export const mockProperties: Property[] = [
     parking: 0,
     address: {
       neighborhood: 'Industrial',
-      city: 'Passo Fundo',
-      state: 'RS',
+      city: 'Itapema',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
@@ -238,8 +238,8 @@ export const mockProperties: Property[] = [
     parking: 2,
     address: {
       neighborhood: 'Progresso',
-      city: 'Erechim',
-      state: 'RS',
+      city: 'Balneário Camboriú',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop',
@@ -266,8 +266,8 @@ export const mockProperties: Property[] = [
     parking: 2,
     address: {
       neighborhood: 'Centro',
-      city: 'Erechim',
-      state: 'RS',
+      city: 'Balneário Camboriú',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&h=600&fit=crop',
@@ -293,8 +293,8 @@ export const mockProperties: Property[] = [
     parking: 2,
     address: {
       neighborhood: 'Koller',
-      city: 'Erechim',
-      state: 'RS',
+      city: 'Balneário Camboriú',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&h=600&fit=crop',
@@ -320,8 +320,8 @@ export const mockProperties: Property[] = [
     parking: 1,
     address: {
       neighborhood: 'FÃ¡tima',
-      city: 'Erechim',
-      state: 'RS',
+      city: 'Balneário Camboriú',
+      state: 'SC',
     },
     images: [
       'https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&h=600&fit=crop',
