@@ -16,7 +16,7 @@ export const mockProperties: Property[] = [
     parking: 2,
     address: {
       neighborhood: 'Centro',
-      city: 'Balne·rio Cambori˙',
+      city: 'Balne√°rio Cambori√∫',
       state: 'SC',
     },
     images: [
@@ -45,7 +45,7 @@ export const mockProperties: Property[] = [
     parking: 3,
     address: {
       neighborhood: 'Bela Vista',
-      city: 'Balne·rio Cambori˙',
+      city: 'Balne√°rio Cambori√∫',
       state: 'SC',
     },
     images: [
@@ -74,7 +74,7 @@ export const mockProperties: Property[] = [
     parking: 0,
     address: {
       neighborhood: 'Parque L√≠via',
-      city: 'Balne·rio Cambori˙',
+      city: 'Balne√°rio Cambori√∫',
       state: 'SC',
     },
     images: [
@@ -128,7 +128,7 @@ export const mockProperties: Property[] = [
     parking: 3,
     address: {
       neighborhood: 'Copas Verdes',
-      city: 'Balne·rio Cambori˙',
+      city: 'Balne√°rio Cambori√∫',
       state: 'SC',
     },
     images: [
@@ -156,7 +156,7 @@ export const mockProperties: Property[] = [
     parking: 2,
     address: {
       neighborhood: 'S√£o Crist√≥v√£o',
-      city: 'Balne·rio Cambori˙',
+      city: 'Balne√°rio Cambori√∫',
       state: 'SC',
     },
     images: [
@@ -184,7 +184,7 @@ export const mockProperties: Property[] = [
     parking: 1,
     address: {
       neighborhood: 'Tr√™s Vendas',
-      city: 'Balne·rio Cambori˙',
+      city: 'Balne√°rio Cambori√∫',
       state: 'SC',
     },
     images: [
@@ -238,7 +238,7 @@ export const mockProperties: Property[] = [
     parking: 2,
     address: {
       neighborhood: 'Progresso',
-      city: 'Balne·rio Cambori˙',
+      city: 'Balne√°rio Cambori√∫',
       state: 'SC',
     },
     images: [
@@ -266,7 +266,7 @@ export const mockProperties: Property[] = [
     parking: 2,
     address: {
       neighborhood: 'Centro',
-      city: 'Balne·rio Cambori˙',
+      city: 'Balne√°rio Cambori√∫',
       state: 'SC',
     },
     images: [
@@ -293,7 +293,7 @@ export const mockProperties: Property[] = [
     parking: 2,
     address: {
       neighborhood: 'Koller',
-      city: 'Balne·rio Cambori˙',
+      city: 'Balne√°rio Cambori√∫',
       state: 'SC',
     },
     images: [
@@ -320,7 +320,7 @@ export const mockProperties: Property[] = [
     parking: 1,
     address: {
       neighborhood: 'F√°tima',
-      city: 'Balne·rio Cambori˙',
+      city: 'Balne√°rio Cambori√∫',
       state: 'SC',
     },
     images: [
