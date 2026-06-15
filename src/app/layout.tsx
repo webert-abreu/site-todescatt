@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     siteName: "Imobiliária Todescatt",
   },
+  icons: {
+    icon: "/logo-white.png",
+  },
 };
 
 export default function RootLayout({

@@ -82,7 +82,7 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
           style={{ y: heroY, opacity: heroOpacity }}
           className="absolute inset-0 z-0"
         >
-          <div className="absolute inset-0 bg-white/20 z-10 mix-blend-overlay" />
+          <div className="absolute inset-0 bg-black/40 z-10" />
           <Image
             src="/hero-bc.jpg"
             alt="Vista de Balneário Camboriú"
@@ -92,8 +92,8 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
             unoptimized={true}
             sizes="100vw"
           />
-          {/* Light overlay for white theme */}
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent z-10" />
+          {/* Dark overlay for contrast */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
         </motion.div>
 
         {/* Content */}
@@ -104,19 +104,19 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             className="text-center md:text-left"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-md border border-white text-primary-800 text-sm font-semibold mb-6 tracking-[0.15em] shadow-sm">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-6 tracking-[0.15em] shadow-sm">
               IMOBILIÁRIA TODESCATT
             </span>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-primary-950 leading-[1.05] mb-6 tracking-tight text-balance">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.05] mb-6 tracking-tight text-balance">
               Elevando o seu <br className="hidden md:block" />
               <span className="relative inline-block">
                 padrão de vida
-                <div className="absolute -bottom-2 left-0 right-0 h-3 bg-accent-200/60 -z-10 skew-x-[-15deg] transform origin-bottom-left" />
+                <div className="absolute -bottom-2 left-0 right-0 h-3 bg-accent-500/60 -z-10 skew-x-[-15deg] transform origin-bottom-left" />
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-primary-700/80 max-w-2xl mb-12 leading-relaxed font-light">
+            <p className="text-lg sm:text-xl text-white/90 max-w-2xl mb-12 leading-relaxed font-light">
               Exclusividade, sofisticação e conforto. Descubra propriedades que são verdadeiras obras de arte no sul do Brasil.
             </p>
 
@@ -127,10 +127,10 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
               transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
               className="max-w-4xl"
             >
-              <div className="bg-white/80 backdrop-blur-xl border border-white shadow-elevated rounded-2xl p-3 flex flex-col sm:flex-row gap-3 relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-r from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+              <div className="bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl p-3 flex flex-col sm:flex-row gap-3 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                 
-                <div className="flex-1 flex items-center bg-white rounded-xl px-4 py-1 border border-surface-100 focus-within:ring-2 focus-within:ring-accent-400 transition-shadow">
+                <div className="flex-1 flex items-center bg-white rounded-xl px-4 py-1 border border-transparent focus-within:ring-2 focus-within:ring-accent-400 transition-shadow">
                   <Building2 className="w-5 h-5 text-surface-400 shrink-0" />
                   <select
                     className="w-full bg-transparent px-3 py-3 text-surface-700 text-sm border-0 focus:outline-none cursor-pointer"
@@ -144,7 +144,7 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
                   </select>
                 </div>
 
-                <div className="flex-1 flex items-center bg-white rounded-xl px-4 py-1 border border-surface-100 focus-within:ring-2 focus-within:ring-accent-400 transition-shadow">
+                <div className="flex-1 flex items-center bg-white rounded-xl px-4 py-1 border border-transparent focus-within:ring-2 focus-within:ring-accent-400 transition-shadow">
                   <MapPin className="w-5 h-5 text-surface-400 shrink-0" />
                   <select
                     className="w-full bg-transparent px-3 py-3 text-surface-700 text-sm border-0 focus:outline-none cursor-pointer"
@@ -173,13 +173,13 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-primary-900 z-20"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-white z-20"
         >
           <span className="text-[10px] font-semibold tracking-[0.2em] uppercase">Explore</span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-            className="w-[1px] h-12 bg-gradient-to-b from-primary-900 to-transparent"
+            className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"
           />
         </motion.div>
       </section>
