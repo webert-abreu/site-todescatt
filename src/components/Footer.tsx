@@ -156,7 +156,7 @@ export default function Footer() {
                 alt="WAS Venture" 
                 width={80} 
                 height={24} 
-                className="h-5 w-auto object-contain opacity-50 group-hover:opacity-100 transition-opacity" 
+                className="h-5 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity invert grayscale mix-blend-screen" 
               />
             </a>
           </div>
