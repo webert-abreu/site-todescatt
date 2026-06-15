@@ -137,9 +137,28 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/40">
-            <p>&copy; {currentYear} Imobiliária Todescatt. Todos os direitos reservados.</p>
-            <p>CRECI/RS — Todos os imóveis sujeitos à confirmação de valores e disponibilidade.</p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              <p>&copy; {currentYear} Imobiliária Todescatt. Todos os direitos reservados.</p>
+              <span className="hidden sm:inline">•</span>
+              <p>CRECI: 024360</p>
+            </div>
+            
+            <a 
+              href="https://www.wasventure.com.br" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-white/80 transition-colors group"
+            >
+              <span>Desenvolvido por WAS Venture</span>
+              <Image 
+                src="/1.png" 
+                alt="WAS Venture" 
+                width={80} 
+                height={24} 
+                className="h-5 w-auto object-contain opacity-50 group-hover:opacity-100 transition-opacity" 
+              />
+            </a>
           </div>
         </div>
       </div>
