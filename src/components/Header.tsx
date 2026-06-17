@@ -40,7 +40,7 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   const isHome = pathname === '/';
-  const isTransparent = isHome && !isScrolled;
+  const isTransparent = isHome && !isScrolled && !isMobileMenuOpen;
 
   return (
     <header
