@@ -118,9 +118,9 @@ export default function ShareModal({ property }: ShareModalProps) {
 
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white rounded-2xl w-full max-w-md overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200">
+          <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl animate-in fade-in zoom-in duration-200 max-h-[90vh] flex flex-col">
             {/* Header */}
-            <div className="px-6 py-4 border-b border-surface-100 flex items-center justify-between">
+            <div className="px-4 py-3 sm:px-6 sm:py-4 border-b border-surface-100 flex items-center justify-between shrink-0">
               <h3 className="text-lg font-semibold text-surface-900">Compartilhar Imóvel</h3>
               <button 
                 onClick={() => setIsOpen(false)}
@@ -131,7 +131,7 @@ export default function ShareModal({ property }: ShareModalProps) {
             </div>
 
             {/* Content */}
-            <div className="p-6 space-y-8">
+            <div className="p-4 sm:p-6 space-y-5 sm:space-y-8 overflow-y-auto">
               
               {/* Option 1: Copy Link */}
               <div className="space-y-3">
@@ -181,7 +181,7 @@ export default function ShareModal({ property }: ShareModalProps) {
                   {url && (
                     <QRCode
                       value={url}
-                      size={150}
+                      size={120}
                       bgColor={"#ffffff"}
                       fgColor={"#0a0a0a"}
                       level={"L"}
