@@ -6,6 +6,7 @@ import { formatCurrency, formatArea, getPropertyTypeLabel, getCategoryLabel } fr
 import ImageGallery from '@/components/ImageGallery';
 import ContactForm from '@/components/ContactForm';
 import PropertyCard from '@/components/PropertyCard';
+import ShareModal from '@/components/ShareModal';
 import {
   MapPin,
   BedDouble,
@@ -115,12 +116,7 @@ export default async function PropertyDetailPage({ params }: PageProps) {
                     </span>
                   </div>
                 </div>
-                <button
-                  className="p-2 rounded-lg bg-surface-100 text-surface-500 hover:bg-surface-200 transition-colors shrink-0"
-                  aria-label="Compartilhar"
-                >
-                  <Share2 className="w-5 h-5" />
-                </button>
+                <ShareModal property={property} />
               </div>
               <p className="text-3xl font-bold gradient-text mt-4">
                 {formatCurrency(property.price)}
@@ -193,12 +189,7 @@ export default async function PropertyDetailPage({ params }: PageProps) {
                     </span>
                   </div>
                 </div>
-                <button
-                  className="p-2 rounded-lg bg-surface-100 text-surface-500 hover:bg-surface-200 transition-colors shrink-0"
-                  aria-label="Compartilhar"
-                >
-                  <Share2 className="w-4 h-4" />
-                </button>
+                <ShareModal property={property} />
               </div>
 
               <div className="py-4 border-y border-surface-100 mb-6">
