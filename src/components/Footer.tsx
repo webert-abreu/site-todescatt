@@ -156,7 +156,7 @@ export default function Footer() {
                 Desenvolvido por
               </span>
               <Image 
-                src="/was..png" 
+                src="/was_transparent.png" 
                 alt="WAS Venture" 
                 width={80} 
                 height={32} 
