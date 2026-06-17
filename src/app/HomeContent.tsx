@@ -104,10 +104,6 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             className="text-center md:text-left"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-6 tracking-[0.15em] shadow-sm">
-              IMOBILIÁRIA TODESCATT
-            </span>
-
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.05] mb-6 tracking-tight text-balance">
               Elevando o seu <br className="hidden md:block" />
               <span className="relative inline-block">
