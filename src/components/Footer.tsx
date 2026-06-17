@@ -155,9 +155,13 @@ export default function Footer() {
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white">
                 Desenvolvido por
               </span>
-              <span className="font-serif text-xl tracking-wider text-white">
-                WAS.
-              </span>
+              <Image 
+                src="/was..png" 
+                alt="WAS Venture" 
+                width={80} 
+                height={32} 
+                className="h-5 w-auto object-contain" 
+              />
             </a>
           </div>
         </div>
