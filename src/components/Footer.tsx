@@ -158,9 +158,9 @@ export default function Footer() {
               <Image 
                 src="/was_transparent.png" 
                 alt="WAS Venture" 
-                width={80} 
-                height={32} 
-                className="h-5 w-auto object-contain" 
+                width={120} 
+                height={48} 
+                className="h-9 w-auto object-contain" 
               />
             </a>
           </div>
