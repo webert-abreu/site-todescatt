@@ -137,30 +137,35 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-              <p>&copy; {currentYear} Imobiliária Todescatt. Todos os direitos reservados.</p>
-              <span className="hidden sm:inline">•</span>
-              <p>CRECI: 024360</p>
+      <div className="border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-[11px] uppercase tracking-widest font-light text-white/40 text-center sm:text-left">
+              <p className="flex items-center gap-2">
+                <span className="font-semibold text-white tracking-[0.2em]">Todescatt Imóveis</span>
+                <span>&copy; {currentYear}</span>
+              </p>
+              <span className="hidden sm:inline w-1 h-1 rounded-full bg-white/20"></span>
+              <p>CRECI 024360</p>
+              <span className="hidden sm:inline w-1 h-1 rounded-full bg-white/20"></span>
+              <p className="normal-case tracking-wide">Todos os direitos reservados</p>
             </div>
             
             <a 
               href="https://www.wasventure.com.br" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity mt-4 md:mt-0"
+              className="flex items-center gap-3"
             >
-              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white">
+              <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-white/80">
                 Desenvolvido por
               </span>
               <Image 
                 src="/was_transparent.png" 
                 alt="WAS Venture" 
-                width={120} 
-                height={48} 
-                className="h-9 w-auto object-contain" 
+                width={240} 
+                height={80} 
+                className="h-16 sm:h-20 w-auto object-contain grayscale" 
               />
             </a>
           </div>

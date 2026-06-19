@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import PropertyCard from '@/components/PropertyCard';
 import { fetchProperties } from '@/lib/dwv-client';
 import { getPropertyTypeLabel } from '@/lib/utils';
-import { SlidersHorizontal, Search } from 'lucide-react';
+import { SlidersHorizontal, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { PropertyType } from '@/types/property';
 
 export const metadata: Metadata = {
@@ -39,12 +40,26 @@ export default async function ImoveisPage({ searchParams }: PageProps) {
 
   const buildFilterUrl = (newParams: Record<string, string>) => {
     const merged = { ...params, ...newParams };
+    // Se mudou o filtro (tipo ou ordenação), reseta a página para 1, a menos que estejamos mudando especificamente a página
+    if (!newParams.page && merged.page) {
+      delete merged.page;
+    }
+    
     const searchParts = Object.entries(merged)
       .filter(([, v]) => v && v !== '')
       .map(([k, v]) => `${k}=${encodeURIComponent(v!)}`)
       .join('&');
     return `/imoveis${searchParts ? `?${searchParts}` : ''}`;
   };
+
+  const currentPage = Number(params.page) || 1;
+  const itemsPerPage = 6;
+  const totalPages = Math.ceil(properties.length / itemsPerPage);
+
+  const paginatedProperties = properties.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   return (
     <div className="pt-24 pb-16">
@@ -107,12 +122,52 @@ export default async function ImoveisPage({ searchParams }: PageProps) {
         </div>
 
         {/* Results Grid */}
-        {properties.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {properties.map((property) => (
-              <PropertyCard key={property.id} property={property} />
-            ))}
-          </div>
+        {paginatedProperties.length > 0 ? (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {paginatedProperties.map((property) => (
+                <PropertyCard key={property.id} property={property} />
+              ))}
+            </div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center gap-2 sm:gap-4 mt-8 pt-8 border-t border-surface-100 flex-wrap sm:flex-nowrap">
+                {currentPage > 1 ? (
+                  <Link
+                    href={buildFilterUrl({ page: (currentPage - 1).toString() })}
+                    className="group relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-surface-50 hover:bg-surface-100 rounded-full border border-surface-200 transition-all duration-300 hover:shadow-md hover:-translate-x-1 shrink-0"
+                  >
+                    <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-primary-900 group-hover:scale-110 transition-transform" />
+                  </Link>
+                ) : (
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 hidden sm:block" />
+                )}
+
+                <div className="flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-surface-50 rounded-full border border-surface-200 shadow-sm shrink-0">
+                  <span className="text-sm font-bold text-primary-900 whitespace-nowrap">
+                    Página {currentPage} <span className="font-medium text-surface-500">de {totalPages}</span>
+                  </span>
+                </div>
+
+                {currentPage < totalPages ? (
+                  <Link
+                    href={buildFilterUrl({ page: (currentPage + 1).toString() })}
+                    className="group relative flex items-center justify-center pl-4 pr-1 py-1.5 sm:pl-6 sm:pr-2 sm:py-2 gradient-accent rounded-full text-primary-900 font-bold shadow-md hover:shadow-glow transition-all duration-300 hover:translate-x-1 gap-2 sm:gap-3 overflow-hidden shrink-0"
+                  >
+                    <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 ease-in-out"></div>
+                    <span className="z-10 text-xs sm:text-sm uppercase tracking-wider whitespace-nowrap">Ver Mais</span>
+                    <div className="relative z-10 flex items-center justify-center bg-white/40 rounded-full p-1.5 sm:p-2 backdrop-blur-sm border border-white/30 shadow-sm group-hover:bg-white/60 transition-colors shrink-0">
+                       <Image src="/logo-icon.png" alt="Todescatt" width={20} height={20} className="object-contain w-5 h-5 sm:w-6 sm:h-6" />
+                       <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-0.5 sm:ml-1 text-primary-900" />
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="w-[140px] h-12 sm:w-32 sm:h-14 shrink-0 hidden sm:block" />
+                )}
+              </div>
+            )}
+          </>
         ) : (
           <div className="text-center py-20">
             <Search className="w-16 h-16 text-surface-300 mx-auto mb-4" />

@@ -1,4 +1,5 @@
 export function formatCurrency(value: number): string {
+  if (value === 0) return 'Sob Consulta';
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',

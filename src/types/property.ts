@@ -20,7 +20,7 @@ export interface Property {
   price: number;
   area: number;
   bedrooms: number;
-  suites: number;
+  suites?: number;
   bathrooms: number;
   parking: number;
   address: PropertyAddress;

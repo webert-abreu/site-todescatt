@@ -60,7 +60,7 @@ export default async function PropertyDetailPage({ params }: PageProps) {
 
   const details = [
     { icon: BedDouble, label: 'Dormitórios', value: property.bedrooms, show: property.bedrooms > 0 },
-    { icon: BedDouble, label: 'Suítes', value: property.suites, show: property.suites > 0 },
+    { icon: BedDouble, label: 'Suítes', value: property.suites || 0, show: (property.suites ?? 0) > 0 },
     { icon: Bath, label: 'Banheiros', value: property.bathrooms, show: property.bathrooms > 0 },
     { icon: Car, label: 'Vagas', value: property.parking, show: property.parking > 0 },
     { icon: Maximize, label: 'Área Total', value: formatArea(property.area), show: property.area > 0 },
