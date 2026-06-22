@@ -43,19 +43,19 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
   const categories = [
     { 
       type: 'apartment', label: 'Apartamentos', icon: Building2, count: allProperties.filter(p => p.type === 'apartment').length, 
-      theme: { bg: 'bg-blue-50', border: 'border-blue-100', hoverBorder: 'hover:border-blue-300', iconBg: 'bg-blue-100', iconText: 'text-blue-700', title: 'text-blue-950', arrow: 'text-blue-600', blob: 'bg-blue-200/50' }
+      theme: { bg: 'bg-primary-950', border: 'border-primary-900', hoverBorder: 'hover:border-accent-500', iconBg: 'bg-primary-900', iconText: 'text-accent-400', title: 'text-white', text: 'text-primary-200', arrow: 'text-accent-400', blob: 'bg-accent-900/10' }
     },
     { 
       type: 'house', label: 'Casas', icon: Home, count: allProperties.filter(p => p.type === 'house').length, 
-      theme: { bg: 'bg-emerald-50', border: 'border-emerald-100', hoverBorder: 'hover:border-emerald-300', iconBg: 'bg-emerald-100', iconText: 'text-emerald-700', title: 'text-emerald-950', arrow: 'text-emerald-600', blob: 'bg-emerald-200/50' }
+      theme: { bg: 'bg-primary-950', border: 'border-primary-900', hoverBorder: 'hover:border-accent-500', iconBg: 'bg-primary-900', iconText: 'text-accent-400', title: 'text-white', text: 'text-primary-200', arrow: 'text-accent-400', blob: 'bg-accent-900/10' }
     },
     { 
       type: 'land', label: 'Terrenos', icon: TreePine, count: allProperties.filter(p => p.type === 'land').length, 
-      theme: { bg: 'bg-amber-50', border: 'border-amber-100', hoverBorder: 'hover:border-amber-300', iconBg: 'bg-amber-100', iconText: 'text-amber-700', title: 'text-amber-950', arrow: 'text-amber-600', blob: 'bg-amber-200/50' }
+      theme: { bg: 'bg-primary-950', border: 'border-primary-900', hoverBorder: 'hover:border-accent-500', iconBg: 'bg-primary-900', iconText: 'text-accent-400', title: 'text-white', text: 'text-primary-200', arrow: 'text-accent-400', blob: 'bg-accent-900/10' }
     },
     { 
       type: 'commercial', label: 'Comerciais', icon: Store, count: allProperties.filter(p => p.type === 'commercial').length, 
-      theme: { bg: 'bg-purple-50', border: 'border-purple-100', hoverBorder: 'hover:border-purple-300', iconBg: 'bg-purple-100', iconText: 'text-purple-700', title: 'text-purple-950', arrow: 'text-purple-600', blob: 'bg-purple-200/50' }
+      theme: { bg: 'bg-primary-950', border: 'border-primary-900', hoverBorder: 'hover:border-accent-500', iconBg: 'bg-primary-900', iconText: 'text-accent-400', title: 'text-white', text: 'text-primary-200', arrow: 'text-accent-400', blob: 'bg-accent-900/10' }
     },
   ];
 
@@ -317,7 +317,7 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
                   <h3 className={`text-xl font-serif font-semibold ${cat.theme.title} mb-2`}>
                     {cat.label}
                   </h3>
-                  <p className="text-surface-600 font-light flex items-center gap-2">
+                  <p className={`${cat.theme.text} font-light flex items-center gap-2`}>
                     {cat.count} {cat.count === 1 ? 'propriedade' : 'propriedades'}
                     <ArrowRight className={`w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ${cat.theme.arrow}`} />
                   </p>
