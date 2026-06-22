@@ -671,7 +671,7 @@ export const mockProperties: Property[] = [
     type: 'apartment',
     category: 'third_party',
     status: 'available',
-    price: 0,
+    price: 3500000,
     area: 133,
     bedrooms: 3,
     bathrooms: 4,
