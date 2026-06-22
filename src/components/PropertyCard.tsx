@@ -16,13 +16,10 @@ export default function PropertyCard({ property }: PropertyCardProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, watchDrag: false });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [isNew, setIsNew] = useState(false);
 
-  useEffect(() => {
-    if (property.createdAt) {
-      setIsNew(new Date(property.createdAt) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
-    }
-  }, [property.createdAt]);
+  const isNew = property.createdAt 
+    ? new Date(property.createdAt) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
+    : false;
 
   const scrollPrev = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
