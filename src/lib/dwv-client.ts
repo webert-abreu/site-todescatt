@@ -14,7 +14,7 @@ function isDWVConfigured(): boolean {
 async function dwvFetch(endpoint: string): Promise<Response> {
   const response = await fetch(`${DWV_API_BASE}${endpoint}`, {
     headers: {
-      Authorization: `Bearer ${DWV_API_TOKEN}`,
+      token: DWV_API_TOKEN as string,
       'Content-Type': 'application/json',
     },
     next: { revalidate: 300 }, // Cache for 5 minutes
