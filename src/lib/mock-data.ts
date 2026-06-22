@@ -715,7 +715,7 @@ export const mockProperties: Property[] = [
     type: 'apartment',
     category: 'third_party',
     status: 'available',
-    price: 0,
+    price: 2450000,
     area: 244.30,
     bedrooms: 3,
     bathrooms: 2,
@@ -768,7 +768,7 @@ export const mockProperties: Property[] = [
       '/images/properties/residencial-nirvana/PHOTO-2026-06-12-11-44-00_8.jpg',
       '/images/properties/residencial-nirvana/PHOTO-2026-06-12-11-44-00_9.jpg'
     ],
-    description: 'Apartamento diferenciado (Apto 301) no Residencial Nirvana, localizado no coração de Balneário Camboriú. Com impressionantes 244,30m² de área privativa, o imóvel dispõe de 01 suíte master, 02 dormitórios e amplo living com lareira. É finamente mobiliado, decorado e equipado. O grande destaque é a sua área de festas privativa, que conta com amplos terraços laterais, piscina privativa, fogão e forno a lenha, churrasqueira, além de mesas de jogos e sinuca. Possui 02 vagas de garagem (01 e 08).',
+    description: 'Apartamento diferenciado (Apto 301) no Residencial Nirvana, localizado no coração de Balneário Camboriú. Com impressionantes 244,30m² de área privativa, o imóvel dispõe de 01 suíte master, 02 dormitórios e amplo living com lareira. É finamente mobiliado, decorado e equipado. O grande destaque é a sua área de festas privativa, que conta com amplos terraços laterais, piscina privativa, fogão e forno a lenha, churrasqueira, além de mesas de jogos e sinuca. Possui 02 vagas de garagem (01 e 07).',
     features: ['Apartamento Diferenciado', 'Piscina Privativa', 'Amplo terraço', 'Fogão e forno a lenha'],
     highlighted: true,
     createdAt: '2026-06-19T12:10:00Z',
