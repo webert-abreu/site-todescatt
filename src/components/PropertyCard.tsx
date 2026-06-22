@@ -151,10 +151,10 @@ export default function PropertyCard({ property }: PropertyCardProps) {
       {/* Content */}
       <div className="p-5 pt-4 space-y-4">
         <div>
-          <p className="text-xl font-bold text-primary-950 mb-1">
+          <p className="text-xl font-bold gradient-text mb-1">
             {formatCurrency(property.price)}
           </p>
-          <h3 className="font-serif font-semibold text-surface-800 text-lg leading-snug line-clamp-1 group-hover:text-primary-700 transition-colors">
+          <h3 className="font-serif font-semibold text-primary-950 text-lg leading-snug line-clamp-1 group-hover:text-accent-500 transition-colors">
             {property.title}
           </h3>
           
