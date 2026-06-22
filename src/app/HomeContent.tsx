@@ -43,19 +43,19 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
   const categories = [
     { 
       type: 'apartment', label: 'Apartamentos', icon: Building2, count: allProperties.filter(p => p.type === 'apartment').length, 
-      theme: { bg: 'bg-primary-950', border: 'border-primary-900', hoverBorder: 'hover:border-accent-500', iconBg: 'bg-primary-900', iconText: 'text-accent-400', title: 'text-white', text: 'text-primary-200', arrow: 'text-accent-400', blob: 'bg-accent-900/10' }
+      theme: { bg: 'bg-primary-50/50', border: 'border-primary-100', hoverBorder: 'hover:border-accent-300', iconBg: 'bg-white', iconText: 'text-accent-500', title: 'text-primary-950', text: 'text-primary-800/70', arrow: 'text-accent-500', blob: 'bg-accent-200/30' }
     },
     { 
       type: 'house', label: 'Casas', icon: Home, count: allProperties.filter(p => p.type === 'house').length, 
-      theme: { bg: 'bg-primary-950', border: 'border-primary-900', hoverBorder: 'hover:border-accent-500', iconBg: 'bg-primary-900', iconText: 'text-accent-400', title: 'text-white', text: 'text-primary-200', arrow: 'text-accent-400', blob: 'bg-accent-900/10' }
+      theme: { bg: 'bg-primary-50/50', border: 'border-primary-100', hoverBorder: 'hover:border-accent-300', iconBg: 'bg-white', iconText: 'text-accent-500', title: 'text-primary-950', text: 'text-primary-800/70', arrow: 'text-accent-500', blob: 'bg-accent-200/30' }
     },
     { 
       type: 'land', label: 'Terrenos', icon: TreePine, count: allProperties.filter(p => p.type === 'land').length, 
-      theme: { bg: 'bg-primary-950', border: 'border-primary-900', hoverBorder: 'hover:border-accent-500', iconBg: 'bg-primary-900', iconText: 'text-accent-400', title: 'text-white', text: 'text-primary-200', arrow: 'text-accent-400', blob: 'bg-accent-900/10' }
+      theme: { bg: 'bg-primary-50/50', border: 'border-primary-100', hoverBorder: 'hover:border-accent-300', iconBg: 'bg-white', iconText: 'text-accent-500', title: 'text-primary-950', text: 'text-primary-800/70', arrow: 'text-accent-500', blob: 'bg-accent-200/30' }
     },
     { 
       type: 'commercial', label: 'Comerciais', icon: Store, count: allProperties.filter(p => p.type === 'commercial').length, 
-      theme: { bg: 'bg-primary-950', border: 'border-primary-900', hoverBorder: 'hover:border-accent-500', iconBg: 'bg-primary-900', iconText: 'text-accent-400', title: 'text-white', text: 'text-primary-200', arrow: 'text-accent-400', blob: 'bg-accent-900/10' }
+      theme: { bg: 'bg-primary-50/50', border: 'border-primary-100', hoverBorder: 'hover:border-accent-300', iconBg: 'bg-white', iconText: 'text-accent-500', title: 'text-primary-950', text: 'text-primary-800/70', arrow: 'text-accent-500', blob: 'bg-accent-200/30' }
     },
   ];
 
