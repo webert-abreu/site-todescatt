@@ -361,7 +361,7 @@ export const mockProperties: Property[] = [
     type: 'apartment',
     category: 'third_party',
     status: 'available',
-    price: 0,
+    price: 3550000,
     area: 134.56,
     bedrooms: 3,
     bathrooms: 4,
@@ -402,7 +402,7 @@ export const mockProperties: Property[] = [
       '/images/properties/edificio-cartagena-residence/IMG_6528.jpeg',
       '/images/properties/edificio-cartagena-residence/IMG_6529.jpeg'
     ],
-    description: 'Apartamento no Edifício Cartagena Residence (Construtora RV) localizado no Centro de Balneário Camboriú. Conta com 134,56m² de área privativa, 03 suítes, lavabo, amplo living integrado com cozinha e espaço gourmet. Possui 02 vagas de garagem. O empreendimento conta com 1200m² de área de lazer completa incluindo piscina, cinema, spa e salões de festas.',
+    description: 'Apartamento mobiliado, decorado e equipado no Edifício Cartagena Residence (Construtora RV) localizado no Centro de Balneário Camboriú, na Avenida Brasil. Conta com 134,56m² de área privativa, 03 suítes, lavabo, amplo living integrado com cozinha e espaço gourmet. Possui 02 vagas de garagem. O empreendimento conta com 1200m² de área de lazer completa incluindo piscina, cinema, spa e salões de festas.',
     features: ['Espaço gourmet', 'Lazer completo', 'Construtora RV', 'Persianas automatizadas'],
     highlighted: true,
     createdAt: '2026-06-19T11:00:00Z',
