@@ -85,20 +85,23 @@ function mapDWVStatus(status: string): Property['status'] {
 export async function fetchProperties(
   filters?: Record<string, string | undefined>
 ): Promise<Property[]> {
+  const manualProperties = getFilteredProperties();
+
   if (!isDWVConfigured()) {
-    console.log('[DWV] Token não configurado - usando dados de demonstração');
     return getFilteredProperties(filters);
   }
 
   try {
     const response = await dwvFetch('/integration/properties');
     const data = await response.json();
-    const properties = (data.data || data.properties || data || [])
+    const dwvProperties = (data.data || data.properties || data || [])
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .map((item: any) => transformDWVProperty(item));
 
+    const combinedProperties = [...manualProperties, ...dwvProperties];
+
     // Apply local filters
-    let result = properties;
+    let result = combinedProperties;
     if (filters) {
       if (filters.type) result = result.filter((p: Property) => p.type === filters.type);
       if (filters.city) result = result.filter((p: Property) => p.address.city.toLowerCase() === filters.city!.toLowerCase());
@@ -120,8 +123,11 @@ export async function fetchProperties(
 }
 
 export async function fetchPropertyById(id: string): Promise<Property | null> {
+  const manualProperty = getMockPropertyById(id);
+  if (manualProperty) return manualProperty;
+
   if (!isDWVConfigured()) {
-    return getMockPropertyById(id) || null;
+    return null;
   }
 
   try {
@@ -130,6 +136,6 @@ export async function fetchPropertyById(id: string): Promise<Property | null> {
     return transformDWVProperty(data.data || data);
   } catch (error) {
     console.error(`[DWV] Erro ao buscar imóvel ${id}:`, error);
-    return getMockPropertyById(id) || null;
+    return null;
   }
 }
