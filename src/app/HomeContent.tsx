@@ -41,10 +41,22 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
   ];
 
   const categories = [
-    { type: 'apartment', label: 'Apartamentos', icon: Building2, count: allProperties.filter(p => p.type === 'apartment').length },
-    { type: 'house', label: 'Casas', icon: Home, count: allProperties.filter(p => p.type === 'house').length },
-    { type: 'land', label: 'Terrenos', icon: TreePine, count: allProperties.filter(p => p.type === 'land').length },
-    { type: 'commercial', label: 'Comerciais', icon: Store, count: allProperties.filter(p => p.type === 'commercial').length },
+    { 
+      type: 'apartment', label: 'Apartamentos', icon: Building2, count: allProperties.filter(p => p.type === 'apartment').length, 
+      theme: { bg: 'bg-blue-50', border: 'border-blue-100', hoverBorder: 'hover:border-blue-300', iconBg: 'bg-blue-100', iconText: 'text-blue-700', title: 'text-blue-950', arrow: 'text-blue-600', blob: 'bg-blue-200/50' }
+    },
+    { 
+      type: 'house', label: 'Casas', icon: Home, count: allProperties.filter(p => p.type === 'house').length, 
+      theme: { bg: 'bg-emerald-50', border: 'border-emerald-100', hoverBorder: 'hover:border-emerald-300', iconBg: 'bg-emerald-100', iconText: 'text-emerald-700', title: 'text-emerald-950', arrow: 'text-emerald-600', blob: 'bg-emerald-200/50' }
+    },
+    { 
+      type: 'land', label: 'Terrenos', icon: TreePine, count: allProperties.filter(p => p.type === 'land').length, 
+      theme: { bg: 'bg-amber-50', border: 'border-amber-100', hoverBorder: 'hover:border-amber-300', iconBg: 'bg-amber-100', iconText: 'text-amber-700', title: 'text-amber-950', arrow: 'text-amber-600', blob: 'bg-amber-200/50' }
+    },
+    { 
+      type: 'commercial', label: 'Comerciais', icon: Store, count: allProperties.filter(p => p.type === 'commercial').length, 
+      theme: { bg: 'bg-purple-50', border: 'border-purple-100', hoverBorder: 'hover:border-purple-300', iconBg: 'bg-purple-100', iconText: 'text-purple-700', title: 'text-purple-950', arrow: 'text-purple-600', blob: 'bg-purple-200/50' }
+    },
   ];
 
   const benefits = [
@@ -295,19 +307,19 @@ export default function HomeContent({ allProperties }: HomeContentProps) {
               <motion.div key={cat.type} variants={itemVariants}>
                 <Link
                   href={`/imoveis?type=${cat.type}`}
-                  className="group relative overflow-hidden rounded-3xl bg-surface-50 p-8 block border border-surface-100 hover:border-accent-200 transition-colors duration-500"
+                  className={`group relative overflow-hidden rounded-3xl ${cat.theme.bg} p-8 block border ${cat.theme.border} ${cat.theme.hoverBorder} transition-colors duration-500`}
                 >
-                  <div className="absolute right-0 top-0 w-32 h-32 bg-accent-100/50 rounded-bl-[100px] -z-10 group-hover:scale-110 transition-transform duration-700" />
+                  <div className={`absolute right-0 top-0 w-32 h-32 ${cat.theme.blob} rounded-bl-[100px] -z-10 group-hover:scale-110 transition-transform duration-700`} />
                   
-                  <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:shadow-md transition-shadow duration-500">
-                    <cat.icon className="w-8 h-8 text-primary-800" />
+                  <div className={`w-16 h-16 rounded-2xl ${cat.theme.iconBg} shadow-sm flex items-center justify-center mb-6 group-hover:shadow-md transition-shadow duration-500`}>
+                    <cat.icon className={`w-8 h-8 ${cat.theme.iconText}`} />
                   </div>
-                  <h3 className="text-xl font-serif font-semibold text-primary-950 mb-2">
+                  <h3 className={`text-xl font-serif font-semibold ${cat.theme.title} mb-2`}>
                     {cat.label}
                   </h3>
-                  <p className="text-surface-500 font-light flex items-center gap-2">
+                  <p className="text-surface-600 font-light flex items-center gap-2">
                     {cat.count} {cat.count === 1 ? 'propriedade' : 'propriedades'}
-                    <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-accent-500" />
+                    <ArrowRight className={`w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ${cat.theme.arrow}`} />
                   </p>
                 </Link>
               </motion.div>
