@@ -582,7 +582,7 @@ export const mockProperties: Property[] = [
     type: 'apartment',
     category: 'third_party',
     status: 'available',
-    price: 0,
+    price: 3800000,
     area: 122,
     bedrooms: 3,
     bathrooms: 4,
@@ -617,7 +617,7 @@ export const mockProperties: Property[] = [
       '/images/properties/edificio-boulevard-brasil/WhatsApp Image 2026-02-05 at 14.44.56 (9).jpeg',
       '/images/properties/edificio-boulevard-brasil/WhatsApp Image 2026-02-05 at 14.44.56.jpeg'
     ],
-    description: 'O Edifício Boulevard Brasil é ideal para quem busca uma opção pronta para morar no Centro de Balneário Camboriú, a poucos metros da Praia Central. Com apenas um apartamento por andar, a unidade conta com 122m² de área privativa, 03 suítes (sendo uma master com sacada), lavabo, amplo living e cozinha integrada com espaço gourmet. Possui 03 vagas de garagem. A infraestrutura de lazer é completa, com piscina adulto e infantil, cinema, salões de festas, espaço zen e academia.',
+    description: 'O Edifício Boulevard Brasil é ideal para quem busca uma opção pronta para morar no Centro de Balneário Camboriú, a poucos metros da Praia Central. Com apenas um apartamento por andar, a unidade conta com 122m² de área privativa, 03 suítes (sendo uma master com sacada), lavabo, amplo living e cozinha integrada com espaço gourmet. É finamente mobiliado, decorado e equipado. Possui 03 vagas de garagem. A infraestrutura de lazer é completa, com piscina adulto e infantil, cinema, salões de festas, espaço zen e academia.',
     features: ['1 apartamento por andar', '3 Suítes', 'Lazer completo', '3 vagas de garagem'],
     highlighted: true,
     createdAt: '2026-06-19T11:40:00Z',
