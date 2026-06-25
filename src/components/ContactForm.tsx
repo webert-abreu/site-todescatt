@@ -24,14 +24,31 @@ export default function ContactForm({ propertyTitle, propertyId }: ContactFormPr
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate sending
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          propertyId,
+          propertyTitle,
+          source: 'Formulário do Site'
+        }),
+      });
 
-    // In production, would send to an API endpoint or email service
-    console.log('Form submitted:', formData);
+      if (!response.ok) {
+        throw new Error('Falha ao enviar formulário');
+      }
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Erro ao enviar contato:', error);
+      alert('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente ou entre em contato via WhatsApp.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
