@@ -25,35 +25,48 @@ export default function ContactForm({ propertyTitle, propertyId }: ContactFormPr
     setIsSubmitting(true);
 
     try {
-      const webhookUrl = process.env.NEXT_PUBLIC_CRM_WEBHOOK_URL || '';
+      const webhookUrl = process.env.NEXT_PUBLIC_CRM_WEBHOOK_URL;
+      const apiKey = process.env.NEXT_PUBLIC_CRM_API_KEY;
+
+      if (!webhookUrl) {
+        throw new Error('Configuração ausente: NEXT_PUBLIC_CRM_WEBHOOK_URL não definida.');
+      }
       
+      const payload = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        property_id: propertyId || '',
+        property_title: propertyTitle || '',
+        source: 'Site Todescatti Imóveis',
+        created_at: new Date().toISOString()
+      };
+
+      console.log('Disparando para CRM URL:', webhookUrl);
+      console.log('Payload:', payload);
+
       const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-api-key': process.env.NEXT_PUBLIC_CRM_API_KEY || ''
+          'x-api-key': apiKey || ''
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-          property_id: propertyId || '',
-          property_title: propertyTitle || '',
-          source: 'Site Todescatti Imóveis',
-          created_at: new Date().toISOString()
-        }),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
-        throw new Error('Falha ao comunicar com o CRM');
+        // Se a resposta não for 200-299, captura o texto do erro que o CRM retornou
+        const errorText = await response.text();
+        console.error('Falha na resposta do CRM:', response.status, errorText);
+        throw new Error(`O servidor retornou erro ${response.status}`);
       }
 
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
-    } catch (error) {
-      console.error('Erro ao enviar lead:', error);
-      alert('Não foi possível enviar a mensagem no momento. Por favor, tente pelo WhatsApp.');
+    } catch (error: any) {
+      console.error('Erro rigoroso ao enviar lead:', error);
+      alert(`Erro: ${error.message || 'Não foi possível enviar a mensagem no momento. Por favor, tente pelo WhatsApp.'}`);
     } finally {
       setIsSubmitting(false);
     }
