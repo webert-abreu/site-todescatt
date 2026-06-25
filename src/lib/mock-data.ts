@@ -802,7 +802,7 @@ export const mockProperties: Property[] = [
       '/images/properties/edificio-marques-de-olinda/WhatsApp Image 2026-06-23 at 18.37.18 (4).jpeg',
       '/images/properties/edificio-marques-de-olinda/WhatsApp Image 2026-06-23 at 18.37.18.jpeg'
     ],
-    description: 'Apto alto padrão, acomodação p/7 pessoas, vista total mar de todos os comodos. 2 dormit. sendo 1 suíte com ar. Outro com 3 camas, sofá cama casal na sala de TV, móveis claros, sob medida, colchões primeira linha, sala com 4 amb., Home theater, TV Smarth 52\', espaço gourmet com cooktop elétrico digital, forno elétrico, microondas, geladeira duplex, lavaroupas, etc. Totalmente mobiliado, equipado e decorado, churrasq. na varanda evidraçada Reiki. Cond. em torno de 850,00 e IPTU 1800,00.',
+    description: 'Apto alto padrão, vista total mar de todos os comodos. 2 dormit. sendo 1 suíte com ar. Móveis claros, sob medida, colchões primeira linha, sala com 4 amb., Home theater, TV Smart 52\', espaço gourmet com cooktop elétrico digital, forno elétrico, microondas, geladeira duplex, lavaroupas, etc. Totalmente mobiliado, equipado e decorado, churrasq. na varanda evidraçada Reiki. Cond. em torno de 850,00 e IPTU 1800,00.',
     features: ['Vista total para o mar', 'Mobiliado, equipado e decorado', 'Alto padrão', 'Churrasqueira na varanda'],
     highlighted: true,
     createdAt: '2026-06-25T17:00:00Z',
