@@ -772,6 +772,40 @@ export const mockProperties: Property[] = [
     features: ['Apartamento Diferenciado', 'Piscina Privativa', 'Amplo terraço', 'Fogão e forno a lenha'],
     highlighted: true,
     createdAt: '2026-06-19T12:10:00Z',
+  },
+  {
+    id: 'edificio-marques-de-olinda',
+    title: 'Edifício Marquês de Olinda',
+    slug: 'edificio-marques-de-olinda',
+    type: 'apartment',
+    category: 'third_party',
+    status: 'available',
+    price: 3200000,
+    area: 0,
+    bedrooms: 2,
+    suites: 1,
+    bathrooms: 2,
+    parking: 2,
+    address: {
+      street: 'Av. Atlântica nº 2700 esq. 2300, apto 1402A',
+      neighborhood: 'Centro',
+      city: 'Balneário Camboriú',
+      state: 'SC',
+    },
+    images: [
+      '/images/properties/edificio-marques-de-olinda/WhatsApp Image 2026-06-23 at 18.37.17 (1).jpeg',
+      '/images/properties/edificio-marques-de-olinda/WhatsApp Image 2026-06-23 at 18.37.17 (2).jpeg',
+      '/images/properties/edificio-marques-de-olinda/WhatsApp Image 2026-06-23 at 18.37.17.jpeg',
+      '/images/properties/edificio-marques-de-olinda/WhatsApp Image 2026-06-23 at 18.37.18 (1).jpeg',
+      '/images/properties/edificio-marques-de-olinda/WhatsApp Image 2026-06-23 at 18.37.18 (2).jpeg',
+      '/images/properties/edificio-marques-de-olinda/WhatsApp Image 2026-06-23 at 18.37.18 (3).jpeg',
+      '/images/properties/edificio-marques-de-olinda/WhatsApp Image 2026-06-23 at 18.37.18 (4).jpeg',
+      '/images/properties/edificio-marques-de-olinda/WhatsApp Image 2026-06-23 at 18.37.18.jpeg'
+    ],
+    description: 'Apto alto padrão, acomodação p/7 pessoas, vista total mar de todos os comodos. 2 dormit. sendo 1 suíte com ar. Outro com 3 camas, sofá cama casal na sala de TV, móveis claros, sob medida, colchões primeira linha, sala com 4 amb., Home theater, TV Smarth 52\', espaço gourmet com cooktop elétrico digital, forno elétrico, microondas, geladeira duplex, lavaroupas, etc. Totalmente mobiliado, equipado e decorado, churrasq. na varanda evidraçada Reiki. Cond. em torno de 850,00 e IPTU 1800,00.',
+    features: ['Vista total para o mar', 'Mobiliado, equipado e decorado', 'Alto padrão', 'Churrasqueira na varanda'],
+    highlighted: true,
+    createdAt: '2026-06-25T17:00:00Z',
   }
 ];
 
