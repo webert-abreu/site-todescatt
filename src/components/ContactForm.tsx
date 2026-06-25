@@ -25,27 +25,35 @@ export default function ContactForm({ propertyTitle, propertyId }: ContactFormPr
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
+      const webhookUrl = process.env.NEXT_PUBLIC_CRM_WEBHOOK_URL || '';
+      
+      const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'x-api-key': process.env.NEXT_PUBLIC_CRM_API_KEY || ''
         },
         body: JSON.stringify({
-          ...formData,
-          propertyId,
-          propertyTitle,
-          source: 'Formulário do Site'
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          property_id: propertyId || '',
+          property_title: propertyTitle || '',
+          source: 'Site Todescatti Imóveis',
+          created_at: new Date().toISOString()
         }),
       });
 
       if (!response.ok) {
-        throw new Error('Falha ao enviar formulário');
+        throw new Error('Falha ao comunicar com o CRM');
       }
 
       setIsSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
-      console.error('Erro ao enviar contato:', error);
-      alert('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente ou entre em contato via WhatsApp.');
+      console.error('Erro ao enviar lead:', error);
+      alert('Não foi possível enviar a mensagem no momento. Por favor, tente pelo WhatsApp.');
     } finally {
       setIsSubmitting(false);
     }
@@ -56,10 +64,10 @@ export default function ContactForm({ propertyTitle, propertyId }: ContactFormPr
       <div className="text-center py-10 px-6 animate-fade-in">
         <CheckCircle className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
         <h3 className="text-xl font-semibold text-surface-900 mb-2">
-          Mensagem Enviada!
+          Mensagem enviada com sucesso!
         </h3>
         <p className="text-surface-500">
-          Recebemos sua mensagem. Entraremos em contato em breve!
+          O corretor entrará em contato.
         </p>
         <button
           onClick={() => {
