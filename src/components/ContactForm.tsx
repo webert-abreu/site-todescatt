@@ -25,47 +25,35 @@ export default function ContactForm({ propertyTitle, propertyId }: ContactFormPr
     setIsSubmitting(true);
 
     try {
-      const webhookUrl = process.env.NEXT_PUBLIC_CRM_WEBHOOK_URL;
-      const apiKey = process.env.NEXT_PUBLIC_CRM_API_KEY;
-
-      if (!webhookUrl) {
-        throw new Error('Configuração ausente: NEXT_PUBLIC_CRM_WEBHOOK_URL não definida.');
-      }
-      
       const payload = {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
         message: formData.message,
-        property_id: propertyId || '',
-        property_title: propertyTitle || '',
-        source: 'Site Todescatti Imóveis',
-        created_at: new Date().toISOString()
+        propertyId: propertyId || '',
+        propertyTitle: propertyTitle || '',
+        source: 'Site Todescatti Imóveis'
       };
 
-      console.log('Disparando para CRM URL:', webhookUrl);
-      console.log('Payload:', payload);
+      console.log('Enviando dados para a API interna do site...');
 
-      const response = await fetch(webhookUrl, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-api-key': apiKey || ''
         },
         body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
-        // Se a resposta não for 200-299, captura o texto do erro que o CRM retornou
-        const errorText = await response.text();
-        console.error('Falha na resposta do CRM:', response.status, errorText);
-        throw new Error(`O servidor retornou erro ${response.status}`);
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `O servidor retornou erro ${response.status}`);
       }
 
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error: any) {
-      console.error('Erro rigoroso ao enviar lead:', error);
+      console.error('Erro ao enviar lead:', error);
       alert(`Erro: ${error.message || 'Não foi possível enviar a mensagem no momento. Por favor, tente pelo WhatsApp.'}`);
     } finally {
       setIsSubmitting(false);
