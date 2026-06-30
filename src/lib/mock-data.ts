@@ -806,6 +806,40 @@ export const mockProperties: Property[] = [
     features: ['Vista total para o mar', 'Mobiliado, equipado e decorado', 'Alto padrão', 'Churrasqueira na varanda'],
     highlighted: true,
     createdAt: '2026-06-25T17:00:00Z',
+  },
+  {
+    id: 'edificio-alianca',
+    title: 'Edifício Alliança',
+    slug: 'edificio-alianca',
+    type: 'apartment',
+    category: 'third_party',
+    status: 'available',
+    price: 1600000,
+    area: 110,
+    bedrooms: 2,
+    suites: 1,
+    bathrooms: 2,
+    parking: 1,
+    address: {
+      street: 'Avenida Atlântica / Avenida Brasil',
+      neighborhood: 'Centro',
+      city: 'Balneário Camboriú',
+      state: 'SC',
+    },
+    images: [],
+    description: 'Acordar e ver o mar pela janela, todos os dias. Esse é o privilégio de morar no Edifício Alliança, um apartamento à venda no Centro de Balneário Camboriú, pronto para morar e totalmente mobiliado. Quadra mar. O imóvel conta com 110m² de área privativa. A sala recebe o sol da manhã e se abre para a vista mar. São 2 quartos e 2 banheiros com box. Conta com ar-condicionado já instalado, 1 vaga de garagem simples e o edifício dispõe de 2 elevadores e salão de festas com churrasqueira.',
+    features: [
+      'Mobiliado',
+      'Ar Condicionado',
+      'Cozinha com Armário',
+      'Banheiro com Box',
+      'Vista para o Mar',
+      'Sol Da Manhã',
+      'Elevador',
+      'Salão de Festas'
+    ],
+    highlighted: true,
+    createdAt: '2026-06-30T10:00:00Z',
   }
 ];
 
