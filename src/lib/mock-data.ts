@@ -826,7 +826,22 @@ export const mockProperties: Property[] = [
       city: 'Balneário Camboriú',
       state: 'SC',
     },
-    images: [],
+    images: [
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.10 (1).jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.10.jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.11 (1).jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.11 (2).jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.11 (3).jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.11.jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.12 (1).jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.12 (2).jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.12 (3).jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.12.jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.13 (1).jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.13 (2).jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.13 (3).jpeg',
+      '/images/properties/edificio-alianca/WhatsApp Image 2026-06-29 at 18.51.13.jpeg'
+    ],
     description: 'Acordar e ver o mar pela janela, todos os dias. Esse é o privilégio de morar no Edifício Alliança, um apartamento à venda no Centro de Balneário Camboriú, pronto para morar e totalmente mobiliado. Quadra mar. O imóvel conta com 110m² de área privativa. A sala recebe o sol da manhã e se abre para a vista mar. São 2 quartos e 2 banheiros com box. Conta com ar-condicionado já instalado, 1 vaga de garagem simples e o edifício dispõe de 2 elevadores e salão de festas com churrasqueira.',
     features: [
       'Mobiliado',
