@@ -8,6 +8,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { Property } from '@/types/property';
 import { formatCurrency, formatArea, getPropertyTypeLabel, cn } from '@/lib/utils';
 
+const START_TIME = Date.now();
+
 interface PropertyCardProps {
   property: Property;
 }
@@ -18,7 +20,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   const isNew = property.createdAt 
-    ? new Date(property.createdAt) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
+    ? new Date(property.createdAt).getTime() > (START_TIME - 30 * 24 * 60 * 60 * 1000)
     : false;
 
   const scrollPrev = useCallback((e: React.MouseEvent) => {
